@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.21)
 project(fastor VERSION 0.6.4)
 
 if(PROJECT_IS_TOP_LEVEL)
-	option(BUILD_TESTING "Build the testing tree." ON)
+	option(FASTOR_BUILD_TESTING "Build the testing tree." ON)
 endif()
 
 set(FASTOR_SOURCE_DIR "${fastor_SOURCE_DIR}")
@@ -23,9 +23,7 @@ target_include_directories(
         $<BUILD_INTERFACE:${FASTOR_INCLUDE_DIR}>
         $<INSTALL_INTERFACE:${FASTOR_INSTALL_INCLUDE_DIR}>)
 
-if(BUILD_TESTING)
-    enable_testing()
-
+if(FASTOR_BUILD_TESTING)
     add_subdirectory(tests)
 endif()
 
