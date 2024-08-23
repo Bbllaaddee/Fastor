@@ -1,7 +1,9 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.21)
 project(fastor VERSION 0.6.4)
 
-option(BUILD_TESTING "Build the testing tree." ON)
+if(PROJECT_IS_TOP_LEVEL)
+	option(BUILD_TESTING "Build the testing tree." ON)
+endif()
 
 set(FASTOR_SOURCE_DIR "${fastor_SOURCE_DIR}")
 set(FASTOR_BINARY_DIR "${fastor_BINARY_DIR}")
