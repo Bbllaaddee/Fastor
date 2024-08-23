@@ -5,8 +5,6 @@ set(FASTOR_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../)
 
 set(CMAKE_CXX_STANDARD 14)
 
-enable_testing()
-
 if(MSVC)
     add_compile_options("/std:c++17" "/W2" "$<$<CONFIG:RELEASE>:/O2>")
 else()

@@ -24,6 +24,7 @@ target_include_directories(
         $<INSTALL_INTERFACE:${FASTOR_INSTALL_INCLUDE_DIR}>)
 
 if(FASTOR_BUILD_TESTING)
+    enable_testing()
     add_subdirectory(tests)
 endif()
 
